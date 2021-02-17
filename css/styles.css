@@ -704,11 +704,13 @@ body {
   box-sizing: border-box;
   border-radius: 4px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 .modal-icon-input {
   position: relative;
   margin-bottom: 10px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: n;
 }
 .modal-form-icon {
   position: absolute;
@@ -719,6 +721,7 @@ body {
 textarea {
   width: 448px;
   padding: 12px 16px;
+  outline: none;
 }
 textarea::placeholder {
   font-style: normal;
@@ -811,7 +814,11 @@ color: #757575;
 .modal-input:focus {
   border-color: #2196F3;
   cursor: pointer;
-  
+
+}
+.modal-input:hover + .modal-form-icon,
+.modal-input:focus + .modal-form-icon {
+  fill: #2196F3;
 }
 .modal-icon-input:hover,
 .modal-icon-input:focus {
@@ -820,4 +827,8 @@ color: #757575;
 .close-circle:hover,
 .close-circle:focus {
   fill: #2196F3;
+}
+textarea:hover,
+textarea:focus {
+  border-color: #2196F3;
 }
